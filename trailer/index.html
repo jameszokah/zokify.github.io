@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>zok movies</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/slick.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/slick-theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/checkbox.css" type="text/css" media="all" />
+</head>
+
+<body data-theme="light">
+    <div class="top">
+        <div class="nav">
+            <nav class="animated fadeInDownBig">
+                <div class="burger__box">
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </div>
+                <ul class="nav__bar animated slideInDown">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Now Showing</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Top IMdb</a></li>
+                    <li>
+                        <!--  <section title=".slideTwo">
+                                           .slideTwo -->
+                        <div class="slideTwo">
+                            <input type="checkbox" value="None" id="slideTwo" name="check" checked />
+                            <label for="slideTwo">dark</label>
+                        </div>
+                        <!-- end .slideTwo -->
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="welcome">
+                <div class="speeh">
+                    <h3 class="typed">
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="search__form">
+            <form accept-charset="utf-8">
+                <input type="search" name="" class="animated slideInLeft" id="search" value="" />
+                <button class="search__img animated slideInRight" type="button"><a href=""><img src="../img/search.png" alt="" /></a></button>
+            </form>
+        </div>
+    </div>
+    <div class="bottom">
+      
+        <div class="movie__img">
+            <ul class="movie">
+                <li class="animated slideInLeft">
+                    <img src="../img/70.jpg" alt="" />
+
+                    <h4>Batman</h4>
+
+                </li>
+                               <li class="animated slideInLeft">
+                                    <img src="../img/70.jpg" alt="" />
+                                    <h4>Batman</h4>
+                                </li>
+            
+                            <li class="animated slideInLeft">
+                                <img src="../img/70.jpg" alt="" />
+                                <h4>Batman</h4>
+                            </li>        
+                          <li class="animated slideInLeft">
+                              <img src="../img/70.jpg" alt="" />
+                              <h4>Batman</h4>
+                          </li>
+                          
+                             <li class="animated slideInLeft">
+                                 <img src="../img/70.jpg" alt="" />
+                                 <h4>Batman</h4>
+                             </li>             
+                          
+                                 <li class="animated slideInLeft">
+                                     <img src="../img/70.jpg" alt="" />
+                                     <h4>Batman</h4>
+                                 </li>        
+                         
+                         
+                         
+                         
+                    
+                    
+                             
+            </ul>
+            <div class="pagination animated slideInUp">
+                <!-- <div class="text">
+                      <h1>Gooey pagination</h1>
+                      <a href="https://dribbble.com/shots/1676635-Page-scroll-concept">Based on a dribbble by Kreativa Studio</a>. <br />
+                      Made by <a href="codepen.io/lbebber">Lucas Bebber</a>. <br /> <br />
+                      Hover on the dots bellow
+                  </div> -->
+                <ul class="dots">
+                    <li class="selects"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
+            </div>
+            <div class="bottom__pusher">
+            </div>
+        </div>
+    </div>
+    <div class="bottom__nav fixed animated fadeInUp">
+        <ul>
+            <li id="active"><a href="#"> <span><img src="../img/home-white.png" alt="">
+                        <div></div>
+                    </span> </a></li>
+            <li><a href="#"> <span> <img src="../img/user-white.png" alt="" class="down">
+                        <div></div>
+                    </span> </a></li>
+            <li><a href="#"> <span class="block"><img src="../img/video-white.png" alt="" class="down"> <span></span></span> </a></li>
+        </ul>
+    </div>
+    <!--
+    
+    <div class="footer">
+        <footer>
+            
+            <div class="copyright">
+                &copy; copyright 2020.All right reserved.
+            </div>
+        </footer>
+        
+    </div> -->
+    <script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/typed.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $(".slide").slick({
+
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+            });
+
+            const typed = new Typed(".typed", {
+                strings: ['', 'hi its James', 'how are you doing and you can see I am trying my best here'],
+                typeSpeed: 30,
+                backSpeed: 30,
+                delaySpeed: 50,
+                loop: true,
+
+            });
+
+
+            const input = new Typed('#search', {
+                strings: ['Search 10000\'s of Movies', 'that could be from  any where ..', 'eg, like from action Movies, adventure Movies, '],
+                typeSpeed: 0,
+                backSpeed: 0,
+                attr: 'placeholder',
+                bindInputFocusEvents: true,
+                loop: true
+            });
+
+        });
+
+        /*
+        const pagination = () => {
+            
+            
+            $(".dot").hover(function(){
+            var cur=$(this);
+            var dest=cur.position().left;
+            var t=0.6;
+            TweenMax.to($(".selects"),t,{x:dest,ease:Back.easeOut})
+            });
+            var lastPos=$(".selects").position().left;
+            function updateScale(){
+            var pos=$(".selects").position().left;
+            var speed=Math.abs(pos-lastPos);
+            var d=44;
+            var offset=-20;
+            var hd=d/2;
+            var scale=(offset+pos)%d;
+            if(scale>hd){
+            scale=hd-(scale-hd);
+            }
+            scale=1-((scale/hd)*0.35);
+            TweenMax.to($(".selects"),0.1,{scaleY:scale,scaleX:1+(speed*0.06)})
+            lastPos=pos;
+            requestAnimationFrame(updateScale);
+            }
+            requestAnimationFrame(updateScale);
+            $(".dot:eq(0)").trigger("mouseover");
+            
+            
+            
+            
+        };
+        
+        pagination();
+        
+        */
+    </script>
+</body>
+
+</html>
