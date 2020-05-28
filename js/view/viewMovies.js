@@ -35,7 +35,7 @@ const eachMovie = (movie) => {
                             <div class="movie__info">
                                 <h4>${
                              shorternTitle(movie.original_title)}</h4>
-                                <button> <a href="#${movie.id}" > watch Now</a></button>
+                                <button> <a href="./movie/index.html?${movie.media_type}#${movie.id}" > watch Now</a></button>
                             </div>
                         </li>
         
@@ -58,7 +58,7 @@ const eachMovie = (movie) => {
                                 <div class="movie__info">
                                     <h4>${
                                  shorternTitle(movie.original_name)}</h4>
-                                                                    <button> <a href="#${movie.id}"  > watch Now</a></button>
+                                                                    <button> <a href="./movie/index.html?${movie.media_type}#${movie.id}"  > watch Now</a></button>
                                 </div>
                             </li>
             
