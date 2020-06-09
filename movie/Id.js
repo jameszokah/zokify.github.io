@@ -23,7 +23,7 @@ import { dom } from '../js/view/base.js';
   * Movie Instance
   *
   */
- 
+   
  const instanceMovieVideo = async () => {
      state.video = new Movie(getMovieId);
  
