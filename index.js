@@ -1,5 +1,5 @@
-  import Search from './js/model/Search.js';
-  import { AutoComplete } from './js/model/Search.js';
+ // import Search from './js/model/Search.js';
+  import {default as Search, AutoComplete } from './js/model/Search.js';
   import * as viewMovie from './js/view/viewMovies.js';
   import { dom, renderLoader, clearLoader } from './js/view/base.js';
   import * as mode from './js/view/theme.js';

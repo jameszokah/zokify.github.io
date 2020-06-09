@@ -330,6 +330,15 @@ ul .movie .imgBx:hover {
     padding: 3px;
 }
 
+.movie .imgBx::after {
+    content: "tv";
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    color: #fff;
+    
+}
+
 .movie .imgBx:hover {
    background: linear-gradient(to top right,#282E6B47,#17789D99);
    border-radius: 5px;
