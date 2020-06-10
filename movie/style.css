@@ -371,6 +371,11 @@ div.slideTwo {
     text-align: center;
 }
 
+#img__title {
+    color: #f00;
+    text-align: center;
+}
+
 .movie__details {
     text-align: left;
     font-weight: lighter;

@@ -1,28 +1,117 @@
      
-import Movie from '../js/model/Id.js'
+import { default as Movie, Tv } from '../js/model/Id.js'
 
 import { dom } from '../js/view/base.js';
 
  const domStrings = {
      movieGrid: document.querySelector('.video__grid'),
-     movieContainer: document.querySelector('.movie__container-box .container'),
+     movie__img: document.querySelector(' #movie__img'),
+     img__title: document.querySelector(' #img__title'),
+     overview__container: document.querySelector(' .overview__container'),
+     
  }
-
+ 
+ const controlId =  () => {
+    const id = 78;//window.location.hash.replace('#','');
+    const type = 'movie';//window.location.search.replace('?','');
+    /*
+    const movie = new Movie(78);
+    movie.getMovie().then(data => {
+        console.log(movie.result)
+    })
+    console.log(movie);
+    */
+     if(id) {
+         newMovie(id,type);
+        
+        newTv(id,type);
+     }
+     
+     
+ }
+ 
+ const state = {};
+ 
+ const newMovie = async (id,type) => {
+     if(type === 'movie') {
+         
+         state.movie = new Movie(id);
+         
+        await state.movie.getMovie();
+           
+         renderMovie(state.movie.result);
+     }
+ }
+ 
+ const newTv = async (id,type) => {
+     if(type === 'tv') {
+          
+         state.tv = new Tv(id);
+         
+        await state.tv.getTv();
+        
+        console.log(state.tv.result);
+     }
+     
+ }
+ 
+ 
+const  renderMovie = movie => {
+      const image = 'https://image.tmdb.org/t/p/original/';
+    
+   let movieImg = `
+        <img id="show" src="${image + movie.poster_path}" alt="${movie.title}" />
+   `;
+   
+    
+    domStrings.movie__img.innerHTML = movieImg;
+    
+    let imgTitle = `<h4>${movie.original_title}</h4>
+    `;
+    
+    domStrings.img__title.innerHTML = imgTitle;
+    
+    let overView1 = `
+                             
+                                <h6 >${movie.overview}</h6>
+                                
+    `;
+    
+    domStrings.overview__container.innerHTML = overView1;
+    
+    
+}
+ 
+ 
+ 
+ 
+ 
+ const HTML = (selector,html) => {
+     
+     selector.innerHTML = html;
+ }
+ 
+ 
+ 
+ 
+window.addEventListener('load',controlId);
 /**
  * get Session
  *
  */
+ /*
   const getMovieId = sessionStorage.getItem('movieId');
  
  const getTvId = sessionStorage.getItem('tvId');
  console.log(getMovieId,getTvId);
  
  const state = {};
- 
+ */
  /*/**
   * Movie Instance
   *
   */
+  /*
    
  const instanceMovieVideo = async () => {
      state.video = new Movie(getMovieId);
@@ -42,12 +131,12 @@ import { dom } from '../js/view/base.js';
  
      renderId(state.id.result2);
  }
- 
+ */
  /**
   * Tv Instance
   *
   */
- 
+ /*
  const instanceTvVideo = async () => {
      state.video = new Movie(getTvId);
  
@@ -120,4 +209,4 @@ const renderId = (ids) => {
     `;
     
     domStrings.movieContainer.insertAdjacentHTML('beforeend', html);
-}
+}*/
