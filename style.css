@@ -40,11 +40,10 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 'Segoe UI', Tahoma, Geneva, Verdana;
 }
 
-
-
+@media only screen and (max-width: 600px) {
 .top {
     width: 100%;
-    
+
 }
 
 nav {
@@ -71,35 +70,35 @@ nav {
     background-color: #fff;
     line-height: 3px;
     margin: 4px;
-    
+
 }
 
 .hamburger:hover {
     animation: burgers1 2s linear,
-               burgers2 2s linear,
-               burgers3 2s linear;
-    
+        burgers2 2s linear,
+        burgers3 2s linear;
+
 }
 
 .hamburger:nth-child(1) {
     margin: 3px;
-   
+
 }
 
 
 .hamburger:nth-child(2) {
     margin: 3px;
-    
+
 }
 
 .hamburger:nth-child(3) {
     margin: 3px;
-   
+
 }
 
 .burger__box:hover+.nav__bar {
     display: block;
-    
+
 }
 
 
@@ -118,12 +117,15 @@ nav {
 }
 
 
-.nav__bar li, slideTwo li {
+.nav__bar li,
+slideTwo li {
     list-style: none;
     text-align: center;
     height: 60px;
 }
-.nav__bar li a, .slideTwo label {
+
+.nav__bar li a,
+.slideTwo label {
     text-decoration: none;
     color: var(--nav-color);
 }
@@ -161,10 +163,10 @@ nav {
     border: none;
     padding: 10px;
     margin-left: 0;
-    
+
 }
 
- .search__img:hover {
+.search__img:hover {
     background: var(--hover-bg);
     z-index: -1;
     transform: scale(1.2);
@@ -177,7 +179,7 @@ nav {
 .search__form button:hover #search {
     min-width: 200px;
     transition: 3s;
-    
+
 }
 
 
@@ -288,26 +290,27 @@ nav {
     position: absolute;
     overflow: hidden;
     min-height: 300%;
-    
-    
+
+
 }
 
 
-.movie{
+.movie {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 300px;
     grid-auto-rows: minmax(200px, auto);
-   min-height: 200px;
-   margin: 20px;
-   grid-column-gap: 50px;
-   grid-row-gap: 60px;
-    
+    min-height: 200px;
+    margin: 20px;
+    grid-column-gap: 50px;
+    grid-row-gap: 60px;
+
 }
+
 ul .movie .imgBx {
     position: relative;
     transition: 0.5s;
-    
+
 }
 
 ul .movie .imgBx:hover {
@@ -316,8 +319,8 @@ ul .movie .imgBx:hover {
 
 .movie li img {
     opacity: var(--movie-opacity);
-    
-    
+
+
 }
 
 
@@ -336,13 +339,13 @@ ul .movie .imgBx:hover {
     top: 2%;
     right: 1%;
     color: #fff;
-    
+
 }
 
 .movie .imgBx:hover {
-   background: linear-gradient(to top right,#282E6B47,#17789D99);
-   border-radius: 5px;
-  
+    background: linear-gradient(to top right, #282E6B47, #17789D99);
+    border-radius: 5px;
+
 }
 
 
@@ -351,7 +354,7 @@ ul .movie .imgBx:hover {
     border-radius: 3px;
     height: 100%;
     box-shadow: 0 2px 12px #3C46B3C2;
-    
+
 }
 
 .movie li h4 {
@@ -362,7 +365,7 @@ ul .movie .imgBx:hover {
     transition: 0.5s;
 }
 
-.movie .imgBx:hover  h4 {
+.movie .imgBx:hover h4 {
     color: var(--font-color);
 }
 
@@ -370,13 +373,13 @@ ul .movie .imgBx:hover {
 @keyframes burgers1 {
     0% {
         transform: rotate(0deg);
-        
+
     }
-    
+
     100% {
         transform: rotate(-45deg)
     }
-    
+
 }
 
 
@@ -384,7 +387,7 @@ ul .movie .imgBx:hover {
     0% {
         opacity: 1;
     }
-    
+
     100% {
         opacity: 0;
     }
@@ -394,9 +397,9 @@ ul .movie .imgBx:hover {
 @keyframes burgers3 {
     from {
         transform: rotate(0deg);
-        
+
     }
-    
+
     to {
         transform: rotate(45deg);
     }
@@ -413,13 +416,13 @@ select {
 
 select:focus {
     outline: none;
-    
+
 }
 
 .movie__info {
     text-align: center;
-    
-    
+
+
 }
 
 .movie__info button {
@@ -427,8 +430,8 @@ select:focus {
     border-radius: 4px;
     padding: 5px;
     background: var(--button-bg);
-    
-   
+
+
 }
 
 .movie__info button a {
@@ -438,7 +441,7 @@ select:focus {
 
 .movie__info button:active {
     transform: translateY(3px);
-    
+
 }
 
 .movie__info button:hover {
@@ -460,7 +463,7 @@ select:focus {
 .imgBx:hover .movie__info {
     position: absolute;
     top: 100%;
-    
+
 }
 
 footer {
@@ -470,7 +473,7 @@ footer {
     min-height: 100px;
     background: #242424;
     z-index: -2;
-    
+
 }
 
 footer div.copyright {
@@ -495,7 +498,7 @@ footer div.copyright {
 div.bottom__nav ul {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 div.bottom__nav ul li {
@@ -510,7 +513,7 @@ div.bottom__nav ul li a {
     color: #ddd;
     display: block;
     flex-direction: column;
-    
+
 }
 
 div.bottom__nav ul li a img {
@@ -518,13 +521,13 @@ div.bottom__nav ul li a img {
     height: 20px;
     width: 20px;
     background: #121212;
-    
+
 }
 
 div.bottom__nav ul li a #nav__item {
     padding-top: 0;
     margin-top: 0;
-    
+
 }
 
 div.movie__slider {
@@ -534,15 +537,15 @@ div.movie__slider {
     position: absolute;
     top: 10%;
     z-index: -2;
-    
+
 }
 
 .slide {
     width: 100vmin;
     min-height: 100px;
     display: flex;
-    
-   
+
+
 }
 
 .slide img {
@@ -571,7 +574,7 @@ div.movie__slider {
     bottom: 0%;
     height: 60px;
     width: 100%;
-    
+
     z-index: 1;
 }
 
@@ -582,7 +585,7 @@ div.movie__slider {
     z-index: 2;
 }
 
-.typed  {
+.typed {
     --button-color: var(--movie-title);
     color: var(--button-color);
     text-align: center;
@@ -598,7 +601,7 @@ div.movie__slider {
 .dots {
     list-style-type: none;
     background: var(--bg-color);
-  -webkit-filter: blur(5px) contrast(10);
+    -webkit-filter: blur(5px) contrast(10);
     padding: 0;
     margin: 0;
     padding-top: 20px;
@@ -610,7 +613,7 @@ div.movie__slider {
     left: 70px;
     bottom: 70px;
     border-radius: 20px;
-    
+
 }
 
 .dot {
@@ -635,7 +638,7 @@ div.movie__slider {
     width: 40px;
     height: 40px;
     background: var(--font-color);
-   /* //opacity:0.6;
+    /* //opacity:0.6;
     //transition:transform 300ms ease-in-out; */
     position: absolute;
     z-index: 3;
@@ -717,7 +720,7 @@ div.movie__slider {
 
 div.slideTwo {
     display: flex;
-    
+
 }
 
 /* end .slideTwo */
@@ -813,6 +816,6 @@ div#light h4 {
         transform-origin: -300% 50%;
         transform: rotate(360deg);
     }
+}    
+    
 }
-
-
