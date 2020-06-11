@@ -375,6 +375,8 @@ div.slideTwo {
     color: #f00;
     text-align: center;
     letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .movie__details {
@@ -383,7 +385,7 @@ div.slideTwo {
     font-style: italic;
     font-size: 21px;
     letter-spacing: 1px;
-    margin: 9px 0 0 13px;
+    margin: 5px 0 0 13px;
     padding: 8px;
 }
 
