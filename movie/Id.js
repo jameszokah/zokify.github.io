@@ -17,8 +17,8 @@ import { dom } from '../js/view/base.js';
  }
  
  const controlId =  () => {
-    const id = 78;//window.location.hash.replace('#','');
-    const type = 'movie';//window.location.search.replace('?','');
+    const id = window.location.hash.replace('#','');
+    const type = window.location.search.replace('?','');
     /*
     const movie = new Movie(78);
     movie.getMovie().then(data => {
