@@ -7,7 +7,12 @@ import { dom } from '../js/view/base.js';
      movieGrid: document.querySelector('.video__grid'),
      movie__img: document.querySelector(' #movie__img'),
      img__title: document.querySelector(' #img__title'),
-     overview__container: document.querySelector(' .overview__container'),
+     overview1: document.querySelector('#overview1'),
+     title: document.querySelector('#title'),
+     release__date: document.querySelector('#release__date'),
+     popularity: document.querySelector('#popularity'),
+     language: document.querySelector('#language'),
+     vote__count: document.querySelector('#vote__count'),
      
  }
  
@@ -72,13 +77,43 @@ const  renderMovie = movie => {
     domStrings.img__title.innerHTML = imgTitle;
     
     let overView1 = `
-                             
-                                <h6 >${movie.overview}</h6>
+                    <div class="overview__container">
+                                           <h6> ${movie.overview} </h6>
                                 
+                                                      </div> <div class="movie__likes">
+                                
+                                                            <div class="center">
+                                                               <div class="heart">
+                                                                  </div>
+                                                              </div> </div>
+                                                        
     `;
     
-    domStrings.overview__container.innerHTML = overView1;
+    domStrings.overview1.innerHTML = overView1;
+   let title = `
+                   
+                   <h6> Title: ${movie.original_title}</h6> `;
+     let releaseDate = `
+                   <h6> Release Date: ${movie.release_date} </h6>`;
+                   
+      let popularity = `<h6> Popularity: ${movie.popularity} </h6>`; 
+                       
+            let language = `<h6> Language: ${movie.original_language}</h6>`;
+                       
+                let voteCount = `<h6> Vote Count:  ${movie.vote_count}</h6>
+   `;
+   
+   
     
+    domStrings.title.innerHTML = title;
+    
+    domStrings.release__date.innerHTML = releaseDate;
+  
+   domStrings.popularity.innerHTML = popularity;
+   
+   domStrings.language.innerHTML = language;
+   
+   domStrings.vote__count.innerHTML = voteCount;  
     
 }
  
@@ -100,7 +135,7 @@ window.addEventListener('load',controlId);
  *
  */
  /*
-  const getMovieId = sessionStorage.getItem('movieId');
+  const getMovieId = sessionStorag.getItem('movieId');
  
  const getTvId = sessionStorage.getItem('tvId');
  console.log(getMovieId,getTvId);
