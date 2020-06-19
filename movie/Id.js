@@ -1,7 +1,7 @@
      
 import { default as Movie, Tv } from '../js/model/Id.js'
 
-import { dom } from '../js/view/base.js';
+import { dom,renderLoader2,clearLoader2 } from '../js/view/base.js';
 
  const domStrings = {
      movieGrid: document.querySelector('.video__grid'),
@@ -13,6 +13,7 @@ import { dom } from '../js/view/base.js';
      popularity: document.querySelector('#popularity'),
      language: document.querySelector('#language'),
      vote__count: document.querySelector('#vote__count'),
+     movie__container__box: document.querySelector('.movie__container-box'),
      
  }
  
@@ -41,10 +42,13 @@ import { dom } from '../js/view/base.js';
      if(type === 'movie') {
          
          state.movie = new Movie(id);
+         renderLoader2(domStrings.movie__container__box);
          
         await state.movie.getMovie();
+    clearLoader2();
            
          renderMovie(state.movie.result);
+         
      }
  }
  
@@ -130,6 +134,7 @@ const  renderMovie = movie => {
  
  
 window.addEventListener('load',controlId);
+
 /**
  * get Session
  *
