@@ -10,6 +10,7 @@ export const dom = {
     burgerBox: document.querySelector('.burger__box'),
     navBar: document.querySelector('.nav__bar'),
     movieInfo: document.querySelector('.movie__info'),
+    
 
 };
 

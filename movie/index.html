@@ -2,119 +2,89 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>zok movies</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/slick.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/slick-theme.css" type="text/css" media="all" /> 
-    <link rel="stylesheet" href="../css/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="./css/checkbox.css" type="text/css" media="all" />
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zok movies</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/slick.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/slick-theme.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/animate.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./css/checkbox.css" type="text/css" media="all" />
 </head>
 
-<body data-theme="light">
-    <div class="top">
-        <div class="nav">
-            <nav class="animated fadeInDownBig">
-              
-                
-                <div class="burger__box">
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                </div>
-               <ul class="nav__bar animated slideInDown">
-                   <li class="active"><a href="#">Home</a></li>
-                   <li><a href="#">Now Showing</a></li>
-                   <li><a href="#">Trending</a></li>
-                   <li><a href="#">Top IMdb</a></li>
-                   <li>
-                       
-                            
-                                     <div class="slideTwo">
-                                         <input type="checkbox" value="None" id="slideTwo" name="check" checked />
-                                         <label for="slideTwo">dark</label>
-                                     </div>
-                             
-                       
-                   </li>
-                   
-               </ul>
-               
-              </nav>
-              
-             
-            
+<body data-theme="dark">
+  <div class="top">
+    <div class="nav">
+      <nav class="animated fadeInDownBig">
+        <div class="burger__box">
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
         </div>
-      
-      <div class="movie__container-box">
-          <div class="container">
-              <div class="img__card">
-                  
-                   <div id="movie__img">
-                       <!--
+        <ul class="nav__bar animated slideInDown">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Now Showing</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Top IMdb</a></li>
+          <li>
+            <div class="slideTwo">
+              <input type="checkbox" value="none" id="slideTwo" name="check" checked />
+              <label for="slideTwo">dark</label>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="movie__container-box">
+    <!-- <div class="container">
+        <div class="img__card">
+          <div id="movie__img">
+            
                        <img id="show" src="../img/demo3.jpeg" alt="title" />
-                       -->
-                       </div>
-                       <div id="img__title">
-                           <!--
-                       <h4>Movie Title</h4>
                        
-                       -->
-                       </div>
-                           
-                  
-                      <div id="overview1">
-                        <!--  <div class="overview__container">
-                           
-                       <h6 >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nobis doloremque explicabo ut voluptates eligendi commodi! Repellat eveniet quae temporibus porro natus, autem, rerum rem sit id sed dolore accusantium, vero dolores omnis iusto fugit beatae perferendis sapiente voluptatibus unde.</h6>
-                      
-                       </div>
-                          <div class="movie__likes">
-                                 
-                              <div class="center">
-                                  <div class="heart">
-                                  </div>
-                              </div>
-                          </div>
-                          -->
-                       </div>
-                    
-                   
-                   
-               </div>
-               
-              <div class="movie__details">
-              
-                 <div id="title"><!-- <h6> Title:  Flash</h6>
-                --></div>
-                 <div id="release__date">
-                   <!-- <h6>Release Date:  2012-04-07</h6>-->
-                    </div>
-                    <div id="popularity">
-                        <!--
-                    <h6>Popl2ulatrity:  45685.674</h6>-->
-                    </div>
-                    <div id="language">
-                             <!--         <h6>Language:  en</h6>-->
-                          </div>    
-                     <div id="vote__count">    
-                       <!--   <h6>Vote Count:</h6> -->
-                         </div> 
-                                 
+          </div>
+          <div id="img__title">
+            
+                       <h4>Movie Title</h4>
+          </div>
+          <div id="overview1">
+            <div class="overview__container">
+              <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nobis doloremque explicabo ut voluptates eligendi commodi! Repellat eveniet quae temporibus porro natus, autem, rerum rem sit id sed dolore accusantium, vero dolores omnis iusto fugit beatae perferendis sapiente voluptatibus unde.</h6>
+            </div>
+            <div class="movie__likes">
+              <div class="center">
+                <div class="heart">
+                </div>
               </div>
-              
-              
-              
-              
+            </div>
+            
           </div>
-          
+        </div>
+        <div class="movie__details">
+          <div id="title">
+             <h6> Title:  Flash</h6>
+                
           </div>
-          
-             <div class="loader__2">
-                 <ul>
-                     <!--
+          <div id="release__date">
+            <h6>Release Date:  2012-04-07</h6>
+          </div>
+          <div id="popularity">
+            
+                    <h6>Popl2ulatrity:  45685.674</h6>
+          </div>
+          <div id="language">
+                  <h6>Language:  en</h6>
+          </div>
+          <div id="vote__count">
+             <h6>Vote Count:</h6> 
+          </div>
+        </div>
+      </div>-->
+  </div>
+  <div class="loader__2">
+    <ul>
+      <!--
                      <li></li>
                      <li></li>
                      <li></li>
@@ -122,113 +92,79 @@
                      <li></li>
                      <li></li>
                      -->
-                 </ul>
-             </div>
-          
-          
-          <div class="movie__cast">
-              <div id="cast__img">
-                  <div class="actor">
-                  <img src="../img/demo2.jpeg" alt="" />
-                  <h6>James Zokah</h6>
-                  </div>
-              
-              <div class="actor">
-                           <img src="../img/demo2.jpeg" alt="" />
-                              <h6>James Zokah</h6>
-                              </div>
-                  
-              </div>
-              
-              <div class="actor">                  <img src="../img/demo4.jpeg" alt="" />
-                                <h6>James Zokah</h6>
-                                </div>
-              
-              <div class="actor">                  <img src="../img/demo2.jpeg" alt="" />
-                                <h6>James Zokah</h6>
-                                </div>
-              
-              
-          </div>
-          
-          <div class="movie__trailer">
-              <div id="movie__box">
-              <div class="video__grid grid">
-                 <div class="vids teaser__grid">
-                 <!-- <iframe src="https://www.youtube.com/embed/key" width="95%" height="210px" frameborder="0"></iframe>
+    </ul>
+  </div>
+  <div class="movie__cast">
+    <div id="cast__img">
+      <div class="actor">
+        <img src="../img/demo2.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <div class="actor">
+        <img src="../img/demo2.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <!-- <div class="actor"> <img src="../img/demo4.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <div class="actor"> <img src="../img/demo2.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <div class="actor"> <img src="../img/demo4.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <div class="actor"> <img src="../img/demo4.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>
+      <div class="actor"> <img src="../img/demo4.jpeg" alt="" />
+        <h6>James Zokah</h6>
+      </div>-->
+    </div>
+  </div>
+  <div class="movie__trailer">
+    <div id="movie__box">
+      <!--   <div class="video__grid grid">
+        <div class="vids teaser__grid">
+         <iframe src="https://www.youtube.com/embed/key" width="95%" height="210px" frameborder="0"></iframe>
                   
                                     <iframe src="https://www.youtube.com/embed/key" width="95%" height="210px" frameborder="0"></iframe>
                     
                                   <iframe src="https://www.youtube.com/embed/key" width="95%" height="210px" frameborder="0"></iframe>
                 
                                   <iframe src="https://www.youtube.com/embed/key" width="95%" height="210px" frameborder="0"></iframe>  
-                              -->
-                                  </div>     
-                  
-                  <div class="vids">
-                      <p><h3>Overview:</h3> <p class="overview__container"><!--<h6 id="overview">This is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et numquam nihil qui corporis rem quos, ex voluptates ullam maiores reiciendis minima praesentium error fugit alias placeat harum nam soluta odit? Temporibus nemo labore esse earum soluta nostrum quis ducimus. </h6>--></p>
-                      </p>
-                  <p>
-                      <button type="button" id="full__movie"><a href="">watch full movie here</a></button>
-                  </p>
-              </div>
-              </div>
-               
-              </div>
-          </div>
-          
-          
-          
-          
-          
-          
-          
-          
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <div id="down__pusher">
-          <p></p>
-          <p></p>
-         <p></p>
-          
-      </div>
-      
-      
-      
-
-    
-    <div class="bottom__nav fixed animated fadeInUp">
-        
-            <ul>
-                <li id="active" ><a href="../index.html"> <span><img src="../img/home-white.png" alt=""> <div></div></span> </a></li>
-                <li><a href="../user/index.html"> <span> <img src="../img/user-white.png" alt="" class="down"> <div></div></span>  </a></li>
-                <li><a href="../trailer/index.html"> <span class="block"><img src="../img/video-white.png" alt="" class="down"> <span></span></span> </a></li>
-                
-            </ul>
-            
-        
-        
-        
+                              
+        </div>
+        <div class="vids">
+          <p>
+            <h3>Overview:</h3>
+            <p class="overview__container">
+              <h6 id="overview">This is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et numquam nihil qui corporis rem quos, ex voluptates ullam maiores reiciendis minima praesentium error fugit alias placeat harum nam soluta odit? Temporibus nemo labore esse earum soluta nostrum quis ducimus. </h6>
+            </p>
+          </p>
+          <p>
+            <button type="button" id="full__movie"><a href="">watch full movie here</a></button>
+          </p>
+        </div>
+      </div>-->
     </div>
-  
-    <!--
+  </div>
+  <div id="down__pusher">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+  <div class="bottom__nav fixed animated fadeInUp">
+    <ul>
+      <li id="active"><a href="../index.html"> <span><img src="../img/home-white.png" alt="">
+            <div></div>
+          </span> </a></li>
+      <li><a href="../user/index.html"> <span> <img src="../img/user-white.png" alt="" class="down">
+            <div></div>
+          </span> </a></li>
+      <li><a href="../trailer/index.html"> <span class="block"><img src="../img/video-white.png" alt="" class="down"> <span></span></span> </a></li>
+    </ul>
+  </div>
+  <!--
     
     <div class="footer">
         <footer>
@@ -239,13 +175,8 @@
         </footer>
         
     </div> -->
-    
-    <script src="../lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-
-     
-     <script src="./Id.js" type="module" charset="utf-8"></script>
-    
-  
+  <script src="../lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./Id.js" type="module" charset="utf-8"></script>
 </body>
 
 </html>

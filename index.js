@@ -5,59 +5,18 @@
   import * as mode from './js/view/theme.js';
   import Movie from './js/model/Id.js';
 
-  import * as watchNow from './movie/Id.js';
-
 
 
 
   const state = {};
 
 
-
-
-
-  const matchAutoComplete = async () => {
-
-      ;
-      const query = viewMovie.getInput();
-
-
-      const matches = [];
-
-
-      if (query) {
-          /*       
+  const controlSearch = async (query) => {
            
-                
-       state.autoComplete = new AutoComplete(query);
-                
-                
-          await state.autoComplete.getTitle();
-                
-             viewMovie.renderAutoComplete(state.autoComplete.result);    
-            
-         console.log(state.autoComplete.result)
-            }
-            
-    
-    
-    if(query.length === 0) matches = [];
-    console.log(state);
-    */
-      }
-  };
-
-
-  const controlSearch = async () => {
-
-      const query = viewMovie.getInput();
-
       if (query) {
-
-
-
+        
           state.search = new Search(query);
-
+              console.log(query);
           viewMovie.clearInput();
           viewMovie.clearHTML();
           renderLoader(dom.movieImg);
@@ -79,36 +38,32 @@
       }
 
   }
-  export const movieSelected = e => {
-
-      console.log('it works', e, e.target);
-      /*
-          
-
-          controlMovieId();
-
-          return false;
-          */
-  }
-
+  
 
   dom.searchForm.addEventListener('submit', e => {
       e.preventDefault();
-      controlSearch();
+      const query = viewMovie.getInput();
+      controlSearch(query);
+  });
+  
+  window.addEventListener('load',e => {
+    let randomQuery = ['Black panther','Flash','Bumblebee','Merlin','Shannarah chronicle','Deadpool'];
+
+const random = Math.floor(Math.random() * randomQuery.length);
+
+console.log(randomQuery[random],random)
+let query;
+
+query = randomQuery[random],random;
+
+
+      controlSearch(query);
+    
+    
   });
 
-  dom.inputField.addEventListener('keyup', matchAutoComplete);
 
-  /*
-
-  const autoComplete = new AutoComplete('xmen');
-
-      autoComplete.getTitle().then(data => {
-           console.log(data,autoComplete.result);
-           
-       });
-       */
-
+  
   const taggleCheck = e => {
       console.log(e.target)
 
