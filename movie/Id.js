@@ -1,3 +1,4 @@
+<<<<<<< HEAD
      import Movie from '../js/model/Id.js';
      import Tv from '../js/model/Tv.js'
 
@@ -22,6 +23,41 @@
 
 
        }
+=======
+     
+import { default as Movie, Tv } from '../js/model/Id.js'
+
+import { dom,renderLoader2,clearLoader2 } from '../js/view/base.js';
+
+ const domStrings = {
+     movieGrid: document.querySelector('.video__grid'),
+     movie__img: document.querySelector(' #movie__img'),
+     img__title: document.querySelector(' #img__title'),
+     overview1: document.querySelector('#overview1'),
+     title: document.querySelector('#title'),
+     release__date: document.querySelector('#release__date'),
+     popularity: document.querySelector('#popularity'),
+     language: document.querySelector('#language'),
+     vote__count: document.querySelector('#vote__count'),
+     movie__container__box: document.querySelector('.movie__container-box'),
+     
+ }
+ 
+ const controlId =  () => {
+    const id = window.location.hash.replace('#','');
+    const type = window.location.search.replace('?','');
+    /*
+    const movie = new Movie(78);
+    movie.getMovie().then(data => {
+        console.log(movie.result)
+    })
+    console.log(movie);
+    */
+     if(id) {
+         newMovie(id,type);
+        
+        newTv(id,type);
+>>>>>>> master
      }
 
      const state = {};
@@ -32,6 +68,7 @@
        if (type === 'movie') {
 
          state.movie = new Movie(id);
+<<<<<<< HEAD
 
          await state.movie.getMovie();
 
@@ -41,6 +78,15 @@
 
          htmlMockup.renderTrailer(state.movie.result, state.movie);
        }
+=======
+         renderLoader2(domStrings.movie__container__box);
+         
+        await state.movie.getMovie();
+    clearLoader2();
+           
+         renderMovie(state.movie.result);
+         
+>>>>>>> master
      }
 
      const newTv = async (id, type) => {
@@ -137,6 +183,7 @@
      /*
       const getMovieId = sessionStorag.getItem('movieId');
      
+<<<<<<< HEAD
      const getTvId = sessionStorage.getItem('tvId');
      console.log(getMovieId,getTvId);
      
@@ -147,6 +194,33 @@
       *
       */
      /*
+=======
+     selector.innerHTML = html;
+ }
+ 
+ 
+ 
+ 
+window.addEventListener('load',controlId);
+
+/**
+ * get Session
+ *
+ */
+ /*
+  const getMovieId = sessionStorag.getItem('movieId');
+ 
+ const getTvId = sessionStorage.getItem('tvId');
+ console.log(getMovieId,getTvId);
+ 
+ const state = {};
+ */
+ /*/**
+  * Movie Instance
+  *
+  */
+  /*
+>>>>>>> master
    
  const instanceMovieVideo = async () => {
      state.video = new Movie(getMovieId);

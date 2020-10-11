@@ -16,6 +16,7 @@ export const dom = {
 
 const elementStrings = {
     loader: 'loader__container',
+    loader2: 'loader__2',
     
 };
 
@@ -40,3 +41,35 @@ export const clearLoader = () => {
     console.log(clearLoad);
     }
 };
+
+
+export const renderLoader2 = parent => {
+    
+    let loader = `
+                   <div class="${elementStrings.loader2}">
+                       <ul>
+                           
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                           
+                       </ul>
+                   </div>
+    `;
+    
+    parent.insertAdjacentHTML('afterbegin',loader);
+}
+
+export const clearLoader2 = () => {
+    
+    let loader_2 = document.querySelector(`.${elementStrings.loader2}`);
+    
+    if(loader_2) {
+        loader_2.parentElement.removeChild(loader_2);
+        console.log(loader_2);
+    }
+    
+}
