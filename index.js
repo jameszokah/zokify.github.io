@@ -47,7 +47,7 @@
   });
   
   window.addEventListener('load',e => {
-    let randomQuery = ['Black panther','Flash','Bumblebee','Merlin','Shannarah chronicle','Deadpool'];
+    let randomQuery = ['Black panther','Flash','Bumblebee','Merlin','Shannarah chronicles','Deadpool'];
 
 const random = Math.floor(Math.random() * randomQuery.length);
 
