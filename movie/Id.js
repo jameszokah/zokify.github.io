@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+     import Movie from '../js/model/Id.js';
+     import Tv from '../js/model/Tv.js'
+
+     import { dom } from '../js/view/base.js';
+
+     import * as htmlMockup from './idHtml.js';
+
+
+     const controlId = () => {
+       const id = window.location.hash.replace('#', '');
+       const type = window.location.search.replace('?', '');
+
+       const movie = new Tv(7225);
+       movie.getTv().then(data => {
+         console.log(movie.result)
+       })
+       window.m = movie;
+       console.log(m);
+       if (id) {
+         if (type === 'movie') newMovie(id, type);
+         else if (type === 'tv') newTv(id, type);
+
+
+       }
+=======
      
 import { default as Movie, Tv } from '../js/model/Id.js'
 
@@ -31,17 +57,28 @@ import { dom,renderLoader2,clearLoader2 } from '../js/view/base.js';
          newMovie(id,type);
         
         newTv(id,type);
+>>>>>>> master
      }
-     
-     
- }
- 
- const state = {};
- 
- const newMovie = async (id,type) => {
-     if(type === 'movie') {
-         
+
+     const state = {};
+
+
+
+     const newMovie = async (id, type) => {
+       if (type === 'movie') {
+
          state.movie = new Movie(id);
+<<<<<<< HEAD
+
+         await state.movie.getMovie();
+
+         await state.movie.getIdMovie();
+
+         htmlMockup.renderId(state.movie);
+
+         htmlMockup.renderTrailer(state.movie.result, state.movie);
+       }
+=======
          renderLoader2(domStrings.movie__container__box);
          
         await state.movie.getMovie();
@@ -49,84 +86,115 @@ import { dom,renderLoader2,clearLoader2 } from '../js/view/base.js';
            
          renderMovie(state.movie.result);
          
+>>>>>>> master
      }
- }
- 
- const newTv = async (id,type) => {
-     if(type === 'tv') {
-          
+
+     const newTv = async (id, type) => {
+       if (type === 'tv') {
+
          state.tv = new Tv(id);
-         
-        await state.tv.getTv();
-        
-        console.log(state.tv.result);
+
+         await state.tv.getTv();
+         htmlMockup.renderId(state.tv)
+
+         console.log(state.tv.result);
+       }
+
      }
-     
- }
- 
- 
-const  renderMovie = movie => {
-      const image = 'https://image.tmdb.org/t/p/original/';
-    
-   let movieImg = `
-        <img id="show" src="${image + movie.poster_path}" alt="${movie.title}" />
-   `;
-   
-    
-    domStrings.movie__img.innerHTML = movieImg;
-    
-    let imgTitle = `<h4>${movie.original_title}</h4>
-    `;
-    
-    domStrings.img__title.innerHTML = imgTitle;
-    
-    let overView1 = `
-                    <div class="overview__container">
-                                           <h6> ${movie.overview} </h6>
-                                
-                                                      </div> <div class="movie__likes">
-                                
-                                                            <div class="center">
-                                                               <div class="heart">
-                                                                  </div>
-                                                              </div> </div>
-                                                        
-    `;
-    
-    domStrings.overview1.innerHTML = overView1;
-   let title = `
-                   
-                   <h6> Title: ${movie.original_title}</h6> `;
-     let releaseDate = `
-                   <h6> Release Date: ${movie.release_date} </h6>`;
-                   
-      let popularity = `<h6> Popularity: ${movie.popularity} </h6>`; 
-                       
+
+     /*
+          const renderMovie = movie => {
+            const image = 'https://image.tmdb.org/t/p/original/';
+
+            let movieImg = `
+             <img id="show" src="${image + movie.poster_path}" alt="${movie.title}" />
+        `;
+
+
+            domStrings.movie__img.innerHTML = movieImg;
+
+            let imgTitle = `<h4>${movie.original_title}</h4>
+         `;
+
+            domStrings.img__title.innerHTML = imgTitle;
+
+            let overView1 = `
+                         <div class="overview__container">
+                                                <h6> ${movie.overview} </h6>
+                                     
+                                                           </div> <div class="movie__likes">
+                                     
+                                                                 <div class="center">
+                                                                    <div class="heart">
+                                                                       </div>
+                                                                   </div> </div>
+                                                             
+         `;
+
+            domStrings.overview1.innerHTML = overView1;
+            let title = `
+                        
+                        <h6> Title: ${movie.original_title}</h6> `;
+            let releaseDate = `
+                        <h6> Release Date: ${movie.release_date} </h6>`;
+
+            let popularity = `<h6> Popularity: ${movie.popularity} </h6>`;
+
             let language = `<h6> Language: ${movie.original_language}</h6>`;
-                       
-                let voteCount = `<h6> Vote Count:  ${movie.vote_count}</h6>
-   `;
-   
-   
-    
-    domStrings.title.innerHTML = title;
-    
-    domStrings.release__date.innerHTML = releaseDate;
-  
-   domStrings.popularity.innerHTML = popularity;
-   
-   domStrings.language.innerHTML = language;
-   
-   domStrings.vote__count.innerHTML = voteCount;  
-    
-}
- 
- 
- 
- 
- 
- const HTML = (selector,html) => {
+
+            let voteCount = `<h6> Vote Count:  ${movie.vote_count}</h6>
+        `;
+
+
+
+            domStrings.title.innerHTML = title;
+
+            domStrings.release__date.innerHTML = releaseDate;
+
+            domStrings.popularity.innerHTML = popularity;
+
+            domStrings.language.innerHTML = language;
+
+            domStrings.vote__count.innerHTML = voteCount;
+
+          }
+
+
+
+
+          const HTML = (selector, html) => {
+
+            selector.innerHTML = html;
+          }
+
+
+          const renderTv = movie => {
+            console.log(movie)
+
+          }
+     */
+
+
+     window.addEventListener('load', controlId);
+     /**
+      * get Session
+      *
+      */
+     /*
+      const getMovieId = sessionStorag.getItem('movieId');
      
+<<<<<<< HEAD
+     const getTvId = sessionStorage.getItem('tvId');
+     console.log(getMovieId,getTvId);
+     
+     const state = {};
+     */
+     /*/**
+      * Movie Instance
+      *
+      */
+     /*
+=======
      selector.innerHTML = html;
  }
  
@@ -152,6 +220,7 @@ window.addEventListener('load',controlId);
   *
   */
   /*
+>>>>>>> master
    
  const instanceMovieVideo = async () => {
      state.video = new Movie(getMovieId);
@@ -172,11 +241,11 @@ window.addEventListener('load',controlId);
      renderId(state.id.result2);
  }
  */
- /**
-  * Tv Instance
-  *
-  */
- /*
+     /**
+      * Tv Instance
+      *
+      */
+     /*
  const instanceTvVideo = async () => {
      state.video = new Movie(getTvId);
  
