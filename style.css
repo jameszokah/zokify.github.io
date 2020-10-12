@@ -543,7 +543,7 @@ body {
 
   .slide {
     width: 100vmin;
-    min-height: 100px;
+    min-height: 150px;
     display: flex;
 
 

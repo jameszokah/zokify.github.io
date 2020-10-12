@@ -558,7 +558,7 @@ div.login__container hr {
 
 .login-form #email {
   border: none;
-  background: none;
+  background: transparent;
   padding: 2px;
 }
 
@@ -570,7 +570,7 @@ div.login__container hr {
 
 .login-form #password {
   border: none;
-  background: none;
+  background: transparent;
   padding: 2px;
 }
 
